@@ -1,0 +1,2 @@
+STM8S007：全功能支持（默认芯片）
+STM8S005：不支持 UART1（USB模块无效），UART3变UART2（LIN模块需要改代码）

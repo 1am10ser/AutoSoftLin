@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "common.h": "c",
+        "stm8s.h": "c",
+        "bit": "c",
+        "cmath": "c",
+        "compare": "c",
+        "concepts": "c",
+        "type_traits": "c",
+        "limits": "c",
+        "typeinfo": "c"
+    }
+}

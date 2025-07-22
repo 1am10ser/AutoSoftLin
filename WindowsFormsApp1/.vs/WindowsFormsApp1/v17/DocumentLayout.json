@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9551DBD6-82F9-45BF-9BFB-9C1C4203BF16}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\WindowsFormsApp1\\windowsformsapp1\\frock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9551DBD6-82F9-45BF-9BFB-9C1C4203BF16}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\louzi2025\\desktop\\reportsoftware\\windowsformsapp1\\windowsformsapp1\\frock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9551DBD6-82F9-45BF-9BFB-9C1C4203BF16}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\frock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9551DBD6-82F9-45BF-9BFB-9C1C4203BF16}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\louzi2025\\desktop\\reportsoftware\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9551DBD6-82F9-45BF-9BFB-9C1C4203BF16}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9551DBD6-82F9-45BF-9BFB-9C1C4203BF16}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -46,8 +46,7 @@
               "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T00:47:08.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-15T00:47:08.188Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "WindowsFormsApp1\\Form1.Designer.cs",
               "ViewState": "AgIAANcCAAAAAAAAAAASwO0CAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T00:47:13.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-15T00:47:13.334Z"
             },
             {
               "$type": "Document",
@@ -71,8 +69,7 @@
               "ToolTip": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "WindowsFormsApp1\\Form1.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T00:21:34.666Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "WhenOpened": "2025-07-15T00:21:34.666Z"
             },
             {
               "$type": "Document",
@@ -82,7 +79,7 @@
               "RelativeDocumentMoniker": "WindowsFormsApp1\\frock.cs",
               "ToolTip": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\WindowsFormsApp1\\WindowsFormsApp1\\frock.cs",
               "RelativeToolTip": "WindowsFormsApp1\\frock.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvyUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvysAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-17T05:12:11.477Z",
               "EditorCaption": ""
@@ -97,8 +94,7 @@
               "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
               "ViewState": "AgIAAOEAAAAAAAAAAAAIwAABAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T03:31:18.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T03:31:18.284Z"
             }
           ]
         }
