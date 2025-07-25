@@ -2178,6 +2178,9 @@
         <name>$PROJ_DIR$\stm8s.h</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\stm8s_gpio.c</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\stm8s_gpio.h</name>
     </file>
 </project>

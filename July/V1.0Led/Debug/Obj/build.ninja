@@ -24,7 +24,11 @@ build 74hc164.pbi : index 74hc164.xcl
 build 74hc595.pbi : index 74hc595.xcl
 build common.pbi : index common.xcl
 build main.pbi : index main.xcl
-build Led.pbd : link 74hc164.pbi 74hc595.pbi common.pbi main.pbi
+build stm8s_gpio.pbi : index stm8s_gpio.xcl
+build Led_part0.pbi : link 74hc164.pbi 74hc595.pbi
+build Led_part1.pbi : link common.pbi main.pbi
+build Led_part2.pbi : link stm8s_gpio.pbi
+build Led.pbd : link Led_part0.pbi Led_part1.pbi Led_part2.pbi
 build Led.pbw : browsedata Led.pbd
 
 

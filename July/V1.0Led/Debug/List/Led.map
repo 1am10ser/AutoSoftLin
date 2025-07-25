@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     22/Jul/2025  10:45:24
+# IAR ELF Linker V3.11.1.207 for STM8                     24/Jul/2025  13:20:41
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,31 +8,22 @@
 #    Map file     =  
 #        C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\List\Led.map
 #    Command line =  
-#        -f C:\Users\LOUZI2~1\AppData\Local\Temp\EW8CB5.tmp
+#        -f C:\Users\LOUZI2~1\AppData\Local\Temp\EW5BE0.tmp
 #        (C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj\74hc164.o
 #        C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj\74hc595.o
 #        C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj\common.o
 #        C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj\main.o
+#        C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj\stm8s_gpio.o
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --no_out_extension -o
 #        C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Exe\Led.out
 #        --map
 #        C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\List\Led.map
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
-#        8.3\stm8\config\lnkstm8.icf" --config_def _CSTACK_SIZE=0x100
+#        8.3\stm8\config\lnkstm8s005c6.icf" --config_def _CSTACK_SIZE=0x100
 #        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start --debug_lib)
 #
 ###############################################################################
-
-*******************************************************************************
-*** MESSAGES
-***
-
-Error[Li005]: no definition for "GPIO_WriteLow" [referenced from C:\Users\louzi
-          2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj\74hc595.o]
-Error[Li005]: no definition for "GPIO_WriteHigh" [referenced from C:\Users\louz
-          i2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj\74hc595.o]
-
 
 *******************************************************************************
 *** RUNTIME MODEL ATTRIBUTES
@@ -52,37 +43,55 @@ __rt_version               = 4
 ***
 
 "A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
-"A1":  place at end of [0x000000-0x0017ff] { block CSTACK };
+"A1":  place at end of [0x000000-0x0007ff] { block CSTACK };
+"P2":  place in [from 0x000000 to 0x0007ff] {
+          block HEAP, rw section __DLIB_PERTHREAD, rw section .far.bss,
+          rw section .far.data, rw section .far.noinit,
+          rw section .far_func.textrw, rw section .huge.bss,
+          rw section .huge.data, rw section .huge.noinit,
+          rw section .huge_func.textrw, rw section .iar.dynexit,
+          rw section .near.bss, rw section .near.data, rw section .near.noinit,
+          rw section .near_func.textrw };
 "A2":  place at start of [0x008000-0x00ffff] { block INTVEC };
 "P3":  place in [from 0x008000 to 0x00ffff] {
-          ro section .far.data_init, ro section .far_func.textrw_init,
-          ro section .huge.data_init, ro section .huge_func.textrw_init,
-          ro section .iar.init_table, ro section .init_array,
-          ro section .near.data_init, ro section .near.rodata,
-          ro section .near_func.text, ro section .near_func.textrw_init,
-          ro section .tiny.data_init, ro section .tiny.rodata_init };
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+"P4":  place in [from 0x008000 to 0x00ffff] {
+          ro section .far.rodata, ro section .far_func.text };
+"P5":  place in [from 0x008000 to 0x00ffff] {
+          ro section .huge.rodata, ro section .huge_func.text };
 do not initialize {
-   rw section .far.noinit, rw section .huge.noinit, rw section .near.noinit,
-   rw section .tiny.noinit, rw section .vregs };
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+initialize by copy {
+   rw section .far.bss, rw section .far.data, rw section .far_func.textrw,
+   rw section .huge.bss, rw section .huge.data, rw section .huge_func.textrw,
+   rw section .iar.dynexit, rw section .near.bss, rw section .near.data,
+   rw section .near_func.textrw, rw section .tiny.bss, rw section .tiny.data,
+   ro section .tiny.rodata };
 
 No sections matched the following patterns:
 
-  ro section .far.data_init          in "P3"
-  ro section .far.rodata             in "P4"
-  ro section .far_func.text          in "P4"
-  ro section .far_func.textrw_init   in "P3"
-  ro section .huge.data_init         in "P3"
-  ro section .huge.rodata            in "P5"
-  ro section .huge_func.text         in "P5"
-  ro section .huge_func.textrw_init  in "P3"
-  ro section .iar.init_table         in "P3"
-  ro section .init_array             in "P3"
-  ro section .near.data_init         in "P3"
-  ro section .near.rodata            in "P3"
-  ro section .near_func.textrw_init  in "P3"
-  ro section .tiny.data_init         in "P3"
-  ro section .tiny.rodata_init       in "P3"
-  rw section .eeprom.noinit          in "P6"
+  ro section .far.data_init          in "P3-P5"
+  ro section .far.rodata             in "P3-P5"
+  ro section .far_func.text          in "P3-P5"
+  ro section .far_func.textrw_init   in "P3-P5"
+  ro section .huge.data_init         in "P3-P5"
+  ro section .huge.rodata            in "P3-P5"
+  ro section .huge_func.text         in "P3-P5"
+  ro section .huge_func.textrw_init  in "P3-P5"
+  ro section .iar.init_table         in "P3-P5"
+  ro section .init_array             in "P3-P5"
+  ro section .near.rodata            in "P3-P5"
+  ro section .near_func.textrw_init  in "P3-P5"
+  ro section .tiny.data_init         in "P3-P5"
+  ro section .tiny.rodata_init       in "P3-P5"
+  ro section __DLIB_PERTHREAD_init   in "P3-P5"
   rw section .far.bss                in "P2"
   rw section .far.data               in "P2"
   rw section .far.noinit             in "P2"
@@ -93,49 +102,80 @@ No sections matched the following patterns:
   rw section .huge_func.textrw       in "P2"
   rw section .iar.dynexit            in "P2"
   rw section .near.bss               in "P2"
-  rw section .near.data              in "P2"
   rw section .near.noinit            in "P2"
   rw section .near_func.textrw       in "P2"
   rw section .tiny.bss               in "P1"
   rw section .tiny.data              in "P1"
   rw section .tiny.noinit            in "P1"
   rw section .tiny.rodata            in "P1"
+  rw section __DLIB_PERTHREAD        in "P2"
+  section .eeprom.data               in "P6-P8"
+  section .eeprom.noinit             in "P6-P8"
+  section .eeprom.rodata             in "P6-P8"
 
 
-  Section          Kind      Address   Size  Object
-  -------          ----      -------   ----  ------
-"A0":                                  0x10
-  .vregs           uninit   0x000000   0x10  vregs.o [4]
-                          - 0x000010   0x10
+  Section            Kind      Address   Size  Object
+  -------            ----      -------   ----  ------
+"A0":                                    0x10
+  .vregs             uninit   0x000000   0x10  vregs.o [4]
+                            - 0x000010   0x10
 
-"A1":                                 0x100
-  CSTACK                    0x001700  0x100  <Block>
-    CSTACK         uninit   0x001700  0x100  <Block tail>
-                          - 0x001800  0x100
+"P2":                                     0x2
+  P2-1                        0x000010    0x2  <Init block>
+    .near.data       inited   0x000010    0x2  74hc595.o [1]
+                            - 0x000012    0x2
 
-"A2":                                  0x80
-  INTVEC                    0x008000   0x80  <Block>
-    .intvec        const    0x008000   0x80  interrupt.o [4]
-                          - 0x008080   0x80
+"A1":                                   0x100
+  CSTACK                      0x000700  0x100  <Block>
+    CSTACK           uninit   0x000700  0x100  <Block tail>
+                            - 0x000800  0x100
 
-"P3":                                 0x15f
-  .near_func.text  ro code  0x008080   0x78  74hc595.o [1]
-  .near_func.text  ro code  0x0080f8   0x64  vreg_util.o [4]
-  .near_func.text  ro code  0x00815c   0x14  init.o [4]
-  .near_func.text  ro code  0x008170   0x14  __dbg_xxexit.o [3]
-  .near_func.text  ro code  0x008184   0x13  cstartup.o [4]
-  .near_func.text  ro code  0x008197    0xb  74hc595.o [1]
-  .near_func.text  ro code  0x0081a2    0xb  74hc595.o [1]
-  .near_func.text  ro code  0x0081ad    0xb  74hc595.o [1]
-  .near_func.text  ro code  0x0081b8    0xb  74hc595.o [1]
-  .near_func.text  ro code  0x0081c3    0xa  main.o [1]
-  .near_func.text  ro code  0x0081cd    0x5  cexit.o [4]
-  .near_func.text  ro code  0x0081d2    0x3  interrupt.o [4]
-  .near_func.text  ro code  0x0081d5    0x3  low_level_init.o [4]
-  .near_func.text  ro code  0x0081d8    0x3  exit.o [4]
-  .near_func.text  ro code  0x0081db    0x3  unhandled_exception.o [4]
-  .near_func.text  ro code  0x0081de    0x1  __dbg_break.o [3]
-                          - 0x0081df  0x15f
+"A2":                                    0x80
+  INTVEC                      0x008000   0x80  <Block>
+    .intvec          const    0x008000   0x80  interrupt.o [4]
+                            - 0x008080   0x80
+
+"P3-P5":                                0x355
+  .near_func.text    ro code  0x008080   0xc4  74hc595.o [1]
+  .near_func.text    ro code  0x008144   0x8e  stm8s_gpio.o [1]
+  .near_func.text    ro code  0x0081d2   0x78  74hc595.o [1]
+  .near_func.text    ro code  0x00824a   0x77  vreg_util.o [4]
+  .near_func.text    ro code  0x0082c1   0x33  74hc595.o [1]
+  .near_func.text    ro code  0x0082f4   0x28  init_small.o [4]
+  .iar.init_table    const    0x00831c    0xa  - Linker created -
+  .near_func.text    ro code  0x008326   0x14  init.o [4]
+  .near_func.text    ro code  0x00833a   0x14  __dbg_xxexit.o [3]
+  .near_func.text    ro code  0x00834e   0x13  main.o [1]
+  .near_func.text    ro code  0x008361   0x13  cstartup.o [4]
+  .near_func.text    ro code  0x008374    0xb  74hc595.o [1]
+  .near_func.text    ro code  0x00837f    0xb  74hc595.o [1]
+  .near_func.text    ro code  0x00838a    0xb  74hc595.o [1]
+  .near_func.text    ro code  0x008395    0xb  74hc595.o [1]
+  .near_func.text    ro code  0x0083a0    0xb  74hc595.o [1]
+  .near_func.text    ro code  0x0083ab    0xb  74hc595.o [1]
+  .near_func.text    ro code  0x0083b6    0x7  stm8s_gpio.o [1]
+  .near_func.text    ro code  0x0083bd    0x5  cexit.o [4]
+  .near_func.text    ro code  0x0083c2    0x4  stm8s_gpio.o [1]
+  .near_func.text    ro code  0x0083c6    0x3  interrupt.o [4]
+  .near_func.text    ro code  0x0083c9    0x3  low_level_init.o [4]
+  .near_func.text    ro code  0x0083cc    0x3  exit.o [4]
+  .near_func.text    ro code  0x0083cf    0x3  unhandled_exception.o [4]
+  Initializer bytes  const    0x0083d2    0x2  <for P2-1>
+  .near_func.text    ro code  0x0083d4    0x1  __dbg_break.o [3]
+                            - 0x0083d5  0x355
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address   Size
+          -------   ----
+Copy (__iar_copy_init2)
+    1 source range, total size 0x2:
+          0x0083d2   0x2
+    1 destination range, total size 0x2:
+          0x000010   0x2
 
 
 
@@ -146,10 +186,11 @@ No sections matched the following patterns:
     Module                 ro code  ro data  rw data
     ------                 -------  -------  -------
 C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj: [1]
-    74hc595.o                  164
-    main.o                      10
+    74hc595.o                  433        2        2
+    main.o                      19
+    stm8s_gpio.o               153
     ------------------------------------------------
-    Total:                     174
+    Total:                     605        2        2
 
 command line: [2]
     ------------------------------------------------
@@ -166,86 +207,101 @@ dlstm8smn.a: [4]
     cstartup.o                  19
     exit.o                       3
     init.o                      20
+    init_small.o                40
     interrupt.o                  3      128
     low_level_init.o             3
     unhandled_exception.o        3
-    vreg_util.o                100
+    vreg_util.o                119
     vregs.o                                       16
     ------------------------------------------------
-    Total:                     156      128       16
+    Total:                     215      128       16
 
-    Linker created                               256
+    Linker created                       10      256
 ----------------------------------------------------
-    Grand Total:               351      128      272
+    Grand Total:               841      140      274
 
 
 *******************************************************************************
 *** ENTRY LIST
 ***
 
-Entry                     Address  Size  Type      Object
------                     -------  ----  ----      ------
-?b0                      0x000000        Data  Gb  vregs.o [4]
-?b1                      0x000001        Data  Gb  vregs.o [4]
-?b10                     0x00000a        Data  Gb  vregs.o [4]
-?b11                     0x00000b        Data  Gb  vregs.o [4]
-?b12                     0x00000c        Data  Gb  vregs.o [4]
-?b13                     0x00000d        Data  Gb  vregs.o [4]
-?b14                     0x00000e        Data  Gb  vregs.o [4]
-?b15                     0x00000f        Data  Gb  vregs.o [4]
-?b2                      0x000002        Data  Gb  vregs.o [4]
-?b3                      0x000003        Data  Gb  vregs.o [4]
-?b4                      0x000004        Data  Gb  vregs.o [4]
-?b5                      0x000005        Data  Gb  vregs.o [4]
-?b6                      0x000006        Data  Gb  vregs.o [4]
-?b7                      0x000007        Data  Gb  vregs.o [4]
-?b8                      0x000008        Data  Gb  vregs.o [4]
-?b9                      0x000009        Data  Gb  vregs.o [4]
-?e0                      0x000001        Data  Gb  vregs.o [4]
-?e1                      0x000005        Data  Gb  vregs.o [4]
-?e2                      0x000009        Data  Gb  vregs.o [4]
-?e3                      0x00000d        Data  Gb  vregs.o [4]
-?epilogue_l2             0x008158        Code  Gb  vreg_util.o [4]
-?epilogue_l2_l3          0x008155        Code  Gb  vreg_util.o [4]
-?l0                      0x000000        Data  Gb  vregs.o [4]
-?l1                      0x000004        Data  Gb  vregs.o [4]
-?l2                      0x000008        Data  Gb  vregs.o [4]
-?l3                      0x00000c        Data  Gb  vregs.o [4]
-?pop_l2                  0x008137        Code  Gb  vreg_util.o [4]
-?pop_l3                  0x008142        Code  Gb  vreg_util.o [4]
-?push_l2                 0x008110        Code  Gb  vreg_util.o [4]
-?push_l3                 0x008115        Code  Gb  vreg_util.o [4]
-?push_w4                 0x0080f8        Code  Gb  vreg_util.o [4]
-?w0                      0x000000        Data  Gb  vregs.o [4]
-?w1                      0x000002        Data  Gb  vregs.o [4]
-?w2                      0x000004        Data  Gb  vregs.o [4]
-?w3                      0x000006        Data  Gb  vregs.o [4]
-?w4                      0x000008        Data  Gb  vregs.o [4]
-?w5                      0x00000a        Data  Gb  vregs.o [4]
-?w6                      0x00000c        Data  Gb  vregs.o [4]
-?w7                      0x00000e        Data  Gb  vregs.o [4]
-CSTACK$$Base             0x001700         --   Gb  - Linker created -
-CSTACK$$Limit            0x001800         --   Gb  - Linker created -
-HC595_GetBitClockPin     0x0081ad   0xb  Code  Gb  74hc595.o [1]
-HC595_GetBitClockPort    0x0081b8   0xb  Code  Gb  74hc595.o [1]
-HC595_GetDataPin         0x008197   0xb  Code  Gb  74hc595.o [1]
-HC595_GetDataPort        0x0081a2   0xb  Code  Gb  74hc595.o [1]
-HC595_SendByte           0x008080  0x78  Code  Gb  74hc595.o [1]
-INTVEC$$Base             0x008000         --   Gb  - Linker created -
-INTVEC$$Limit            0x008080         --   Gb  - Linker created -
-Region$$Table$$Base    0x00000000         --   Gb  - Linker created -
-Region$$Table$$Limit   0x00000000         --   Gb  - Linker created -
-__DebugBreak             0x0081de   0x1  Code  Gb  __dbg_break.o [3]
-__exit                   0x008170  0x14  Code  Gb  __dbg_xxexit.o [3]
-__iar_data_init2         0x00815c  0x14  Code  Gb  init.o [4]
-__iar_program_start      0x008184        Code  Gb  cstartup.o [4]
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+.iar.init_table$$Base   0x00831c         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x008326         --   Gb  - Linker created -
+?b0                     0x000000        Data  Gb  vregs.o [4]
+?b1                     0x000001        Data  Gb  vregs.o [4]
+?b10                    0x00000a        Data  Gb  vregs.o [4]
+?b11                    0x00000b        Data  Gb  vregs.o [4]
+?b12                    0x00000c        Data  Gb  vregs.o [4]
+?b13                    0x00000d        Data  Gb  vregs.o [4]
+?b14                    0x00000e        Data  Gb  vregs.o [4]
+?b15                    0x00000f        Data  Gb  vregs.o [4]
+?b2                     0x000002        Data  Gb  vregs.o [4]
+?b3                     0x000003        Data  Gb  vregs.o [4]
+?b4                     0x000004        Data  Gb  vregs.o [4]
+?b5                     0x000005        Data  Gb  vregs.o [4]
+?b6                     0x000006        Data  Gb  vregs.o [4]
+?b7                     0x000007        Data  Gb  vregs.o [4]
+?b8                     0x000008        Data  Gb  vregs.o [4]
+?b9                     0x000009        Data  Gb  vregs.o [4]
+?e0                     0x000001        Data  Gb  vregs.o [4]
+?e1                     0x000005        Data  Gb  vregs.o [4]
+?e2                     0x000009        Data  Gb  vregs.o [4]
+?e3                     0x00000d        Data  Gb  vregs.o [4]
+?epilogue_l2            0x0082b9        Code  Gb  vreg_util.o [4]
+?epilogue_l2_l3         0x0082b6        Code  Gb  vreg_util.o [4]
+?epilogue_w4            0x0082bd        Code  Gb  vreg_util.o [4]
+?l0                     0x000000        Data  Gb  vregs.o [4]
+?l1                     0x000004        Data  Gb  vregs.o [4]
+?l2                     0x000008        Data  Gb  vregs.o [4]
+?l3                     0x00000c        Data  Gb  vregs.o [4]
+?pop_l2                 0x008298        Code  Gb  vreg_util.o [4]
+?pop_l3                 0x0082a3        Code  Gb  vreg_util.o [4]
+?pop_w4                 0x008262        Code  Gb  vreg_util.o [4]
+?push_l2                0x008271        Code  Gb  vreg_util.o [4]
+?push_l3                0x008276        Code  Gb  vreg_util.o [4]
+?push_w4                0x00824a        Code  Gb  vreg_util.o [4]
+?w0                     0x000000        Data  Gb  vregs.o [4]
+?w1                     0x000002        Data  Gb  vregs.o [4]
+?w2                     0x000004        Data  Gb  vregs.o [4]
+?w3                     0x000006        Data  Gb  vregs.o [4]
+?w4                     0x000008        Data  Gb  vregs.o [4]
+?w5                     0x00000a        Data  Gb  vregs.o [4]
+?w6                     0x00000c        Data  Gb  vregs.o [4]
+?w7                     0x00000e        Data  Gb  vregs.o [4]
+CSTACK$$Base            0x000700         --   Gb  - Linker created -
+CSTACK$$Limit           0x000800         --   Gb  - Linker created -
+GPIO_Init               0x008144  0x8e  Code  Gb  stm8s_gpio.o [1]
+GPIO_WriteHigh          0x0083b6   0x7  Code  Gb  stm8s_gpio.o [1]
+GPIO_WriteLow           0x0083c2   0x4  Code  Gb  stm8s_gpio.o [1]
+GV_HC595Numbers         0x000010   0x2  Data  Gb  74hc595.o [1]
+HC595_GetBitClockPin    0x00838a   0xb  Code  Gb  74hc595.o [1]
+HC595_GetBitClockPort   0x008395   0xb  Code  Gb  74hc595.o [1]
+HC595_GetDataPin        0x008374   0xb  Code  Gb  74hc595.o [1]
+HC595_GetDataPort       0x00837f   0xb  Code  Gb  74hc595.o [1]
+HC595_GetStoreClockPin  0x0083a0   0xb  Code  Gb  74hc595.o [1]
+HC595_GetStoreClockPort
+                        0x0083ab   0xb  Code  Gb  74hc595.o [1]
+HC595_Init              0x008080  0xc4  Code  Gb  74hc595.o [1]
+HC595_SendByte          0x0081d2  0x78  Code  Gb  74hc595.o [1]
+HC595_SendOutput        0x0082c1  0x33  Code  Gb  74hc595.o [1]
+INTVEC$$Base            0x008000         --   Gb  - Linker created -
+INTVEC$$Limit           0x008080         --   Gb  - Linker created -
+Region$$Table$$Base     0x00831c         --   Gb  - Linker created -
+Region$$Table$$Limit    0x008326         --   Gb  - Linker created -
+__DebugBreak            0x0083d4   0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x00833a  0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_copy_init2        0x0082f4        Code  Gb  init_small.o [4]
+__iar_data_init2        0x008326  0x14  Code  Gb  init.o [4]
+__iar_program_start     0x008361        Code  Gb  cstartup.o [4]
 __iar_unhandled_exception
-                         0x0081db        Code  Gb  unhandled_exception.o [4]
-__intvec                 0x008000        Data  Gb  interrupt.o [4]
-__low_level_init         0x0081d5   0x3  Code  Gb  low_level_init.o [4]
-_exit                    0x0081cd        Code  Gb  cexit.o [4]
-exit                     0x0081d8   0x3  Code  Gb  exit.o [4]
-main                     0x0081c3   0xa  Code  Gb  main.o [1]
+                        0x0083cf        Code  Gb  unhandled_exception.o [4]
+__intvec                0x008000        Data  Gb  interrupt.o [4]
+__low_level_init        0x0083c9   0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x0083bd        Code  Gb  cexit.o [4]
+exit                    0x0083cc   0x3  Code  Gb  exit.o [4]
+main                    0x00834e  0x13  Code  Gb  main.o [1]
 
 
 [1] = C:\Users\louzi2025\Desktop\ReportSoftware\July\V1.0Led\Debug\Obj
@@ -253,9 +309,9 @@ main                     0x0081c3   0xa  Code  Gb  main.o [1]
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a
 
-  351 bytes of readonly  code memory
-  128 bytes of readonly  data memory
-  272 bytes of readwrite data memory
+  841 bytes of readonly  code memory
+  140 bytes of readonly  data memory
+  274 bytes of readwrite data memory
 
-Errors: 2
+Errors: none
 Warnings: none

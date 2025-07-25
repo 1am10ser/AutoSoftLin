@@ -21218,6 +21218,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@GPIO_DeInit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_DeInit(GPIO_TypeDef *)",
+    "location": {
+      "column": "6",
+      "line": "139",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_DeInit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@GPIO_Init",
     "What": "Function",
     "defdec": "Dec",
@@ -21228,6 +21242,34 @@
       "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
     },
     "name": "GPIO_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Init(GPIO_TypeDef *, GPIO_Pin_TypeDef, GPIO_Mode_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "140",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Write",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Write(GPIO_TypeDef *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "141",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_Write",
     "origin": "user_include",
     "scope": null
   },
@@ -21260,6 +21302,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@GPIO_WriteHigh",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_WriteHigh(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "142",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_WriteHigh",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@GPIO_WriteLow",
     "What": "Function",
     "defdec": "Dec",
@@ -21270,6 +21326,34 @@
       "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
     },
     "name": "GPIO_WriteLow",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_WriteLow",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_WriteLow(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "143",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_WriteLow",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_WriteReverse",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_WriteReverse(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "144",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_WriteReverse",
     "origin": "user_include",
     "scope": null
   },
@@ -21302,6 +21386,34 @@
     "scope": null
   },
   {
+    "ID": "c:@F@GPIO_ReadInputData",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t GPIO_ReadInputData(GPIO_TypeDef *)",
+    "location": {
+      "column": "9",
+      "line": "145",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_ReadInputData",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_ReadOutputData",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t GPIO_ReadOutputData(GPIO_TypeDef *)",
+    "location": {
+      "column": "9",
+      "line": "146",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_ReadOutputData",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@GPIO_ReadOutputData",
     "What": "Function",
     "defdec": "Dec",
@@ -21326,6 +21438,34 @@
       "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
     },
     "name": "GPIO_ReadInputPin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_ReadInputPin",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "BitStatus GPIO_ReadInputPin(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "11",
+      "line": "147",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_ReadInputPin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_ExternalPullUpConfig",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_ExternalPullUpConfig(GPIO_TypeDef *, GPIO_Pin_TypeDef, FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "148",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.h"
+    },
+    "name": "GPIO_ExternalPullUpConfig",
     "origin": "user_include",
     "scope": null
   },
@@ -24898,6 +25038,104 @@
     "scope": null
   },
   {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@333@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@352@macro@_SIZET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZET",
+    "location": {
+      "column": "11",
+      "line": "18",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZET",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "19",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "25",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Threads.h@442@macro@_DLIB_THREADS_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -25906,100 +26144,44 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "ID": "c:ystdio.h@100@macro@_YSTDIO",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_YSIZET_H",
+    "display": "_YSTDIO",
     "location": {
       "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "line": "4",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ystdio.h"
     },
-    "name": "_YSIZET_H",
+    "name": "_YSTDIO",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@333@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
+    "ID": "c:@F@remove",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int remove(const char *)",
     "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "column": "18",
+      "line": "62",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ystdio.h"
     },
-    "name": "_SIZE_T",
+    "name": "remove",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@352@macro@_SIZET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZET",
+    "ID": "c:@F@rename",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int rename(const char *, const char *)",
     "location": {
-      "column": "11",
-      "line": "18",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "column": "18",
+      "line": "63",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ystdio.h"
     },
-    "name": "_SIZET",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "19",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "16",
-      "line": "20",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "25",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
+    "name": "rename",
     "origin": "system_include",
     "scope": null
   },
@@ -26098,48 +26280,6 @@
       "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
     "name": "_TLS_CONST_DEFINITION",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ystdio.h@100@macro@_YSTDIO",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSTDIO",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ystdio.h"
-    },
-    "name": "_YSTDIO",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@remove",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int remove(const char *)",
-    "location": {
-      "column": "18",
-      "line": "62",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ystdio.h"
-    },
-    "name": "remove",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@rename",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int rename(const char *, const char *)",
-    "location": {
-      "column": "18",
-      "line": "63",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ystdio.h"
-    },
-    "name": "rename",
     "origin": "system_include",
     "scope": null
   },
@@ -26710,7 +26850,7 @@
     "display": "void HC595_SendOutput(short)",
     "location": {
       "column": "6",
-      "line": "204",
+      "line": "205",
       "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\74hc595.c"
     },
     "name": "HC595_SendOutput",
@@ -26718,13 +26858,13 @@
     "scope": null
   },
   {
-    "ID": "c:74hc595.c@5939@F@HC595_SendOutput@clockPort",
+    "ID": "c:74hc595.c@5949@F@HC595_SendOutput@clockPort",
     "What": "Variable",
     "defdec": "Def",
     "display": "clockPort",
     "location": {
       "column": "19",
-      "line": "207",
+      "line": "208",
       "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\74hc595.c"
     },
     "name": "clockPort",
@@ -26732,13 +26872,13 @@
     "scope": null
   },
   {
-    "ID": "c:74hc595.c@6039@F@HC595_SendOutput@clockPin",
+    "ID": "c:74hc595.c@6049@F@HC595_SendOutput@clockPin",
     "What": "Variable",
     "defdec": "Def",
     "display": "clockPin",
     "location": {
       "column": "22",
-      "line": "210",
+      "line": "211",
       "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\74hc595.c"
     },
     "name": "clockPin",
@@ -26784,6 +26924,146 @@
       "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\main.c"
     },
     "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_DeInit",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_DeInit(GPIO_TypeDef *)",
+    "location": {
+      "column": "6",
+      "line": "53",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_DeInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_Init(GPIO_TypeDef *, GPIO_Pin_TypeDef, GPIO_Mode_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "71",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Write",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_Write(GPIO_TypeDef *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "141",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_Write",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_WriteHigh",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_WriteHigh(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "154",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_WriteHigh",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_WriteLow",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_WriteLow(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "167",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_WriteLow",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_WriteReverse",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_WriteReverse(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "180",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_WriteReverse",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_ReadOutputData",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t GPIO_ReadOutputData(GPIO_TypeDef *)",
+    "location": {
+      "column": "9",
+      "line": "191",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_ReadOutputData",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_ReadInputData",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t GPIO_ReadInputData(GPIO_TypeDef *)",
+    "location": {
+      "column": "9",
+      "line": "202",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_ReadInputData",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_ReadInputPin",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "BitStatus GPIO_ReadInputPin(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "location": {
+      "column": "11",
+      "line": "213",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_ReadInputPin",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_ExternalPullUpConfig",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_ExternalPullUpConfig(GPIO_TypeDef *, GPIO_Pin_TypeDef, FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "225",
+      "path": "C:\\Users\\louzi2025\\Desktop\\ReportSoftware\\July\\V1.0Led\\stm8s_gpio.c"
+    },
+    "name": "GPIO_ExternalPullUpConfig",
     "origin": "project_file",
     "scope": null
   }

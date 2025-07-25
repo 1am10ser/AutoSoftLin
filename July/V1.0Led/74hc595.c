@@ -190,6 +190,7 @@ void HC595_SendByte( short number, u8 byte )
         GPIO_WriteLow(clockPort, clockPin);
         dat ? GPIO_WriteHigh(dataPort, dataPin) : GPIO_WriteLow(dataPort, dataPin);
         GPIO_WriteHigh(clockPort, clockPin);
+        
 
         // 将发送的字节右移1位
         byte >>= 1;
@@ -214,6 +215,8 @@ void HC595_SendOutput( short number )
     // 74HC595 第 13（OE）脚为低电平时，然后引脚 12（STCP）产生一个上升沿后就会输出
     GPIO_WriteLow(clockPort, clockPin);
     GPIO_WriteHigh(clockPort, clockPin);
+    
+    
 }
 
 
