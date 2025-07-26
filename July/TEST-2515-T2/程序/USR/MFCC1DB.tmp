@@ -1,0 +1,122 @@
+/* -------------------------------------------------- */
+// 项目说明：
+// .............
+// ..........................
+/* -------------------------------------------------- */
+
+#include "common.h"
+
+
+/* -------------------------------------------------- */
+// ● 主函数
+/* -------------------------------------------------- */
+
+int main()
+{
+    // 配置内部时钟：1分频
+    CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV1);
+        
+    // 初始化
+    // 串口优先初始化，以免未初始化前被调用导致单片机死机
+    //UART1_CInit();
+    //UART3_CInit();
+
+    // 初始化
+    //LIN_Init();
+    
+    // 初始化
+    //HC164_Init();
+    //HC595_Init();
+    HC165_Init();
+    //ADC2_CInit();
+
+    //TIM1_PWMO_Init(500);
+    //TIM1_PWMO_Send(56, 48, 0, false);
+    //TIM1_PWMO_Send(57, 78, 0, false);
+    //TIM1_PWMI_Init();
+    //TIM1_PWMI_Start();
+
+    //TIM2_PWMO_Init(1000);
+    //TIM2_PWMO_Send(50, 0, false);
+    //TIM2_PWMI_Init();
+    //TIM2_PWMI_Start();
+    
+    //TIM3_PWMO_Init(300);
+    //TIM3_PWMO_Send(36, 0, false);
+    //TIM3_PWMI_Init();
+    //TIM3_PWMI_Start();
+
+    // 电机
+    A4988_MainInit();
+    
+    // 启用总中断
+    enableInterrupts();
+
+    // 液晶屏
+    LCD_MainInit();
+    //LCD_MainColorCircles(true);
+
+    // 关闭全部灯
+    //LED_CloseAll(true);
+    
+    // 主循环内容
+    while(1){
+        //A4988_SetSubdiv(A4988_MS_MODE0_SUBDIV);
+        //A4988_RunStep(A4988_DIR_BACK, 360/1.8); A4988_RunStepWait(360/1.8);
+        //A4988_SetSubdiv(A4988_MS_MODE1_SUBDIV);
+        //A4988_RunStep(A4988_DIR_FRONT, 360*16/1.8); A4988_RunStepWait(360*16/1.8);
+        
+        //A4988_SetSubdiv(A4988_MS_MODE0_SUBDIV);
+        //A4988_RunLength(A4988_DIR_BACK, 10); A4988_RunLengthWait(10);
+        //A4988_SetSubdiv(A4988_MS_MODE1_SUBDIV);
+        //A4988_RunLength(A4988_DIR_FRONT, 10); A4988_RunLengthWait(10);
+
+        //printf("TIM1-56 Freq = %d, Duty = %.2f\r\n", TIM1_PWMI_GetFreq(56), TIM1_PWMI_GetDuty(56));
+        //printf("TIM1-57 Freq = %d, Duty = %.2f\r\n", TIM1_PWMI_GetFreq(57), TIM1_PWMI_GetDuty(57)); delay_ms(500);
+        
+        //TIM1_PWMO_Send(56, 19, 0, true);
+        //TIM1_PWMO_Send(57, 68, 0, true);
+        
+        //TIM2_PWMO_Send(55, 19, 0, true);
+        //TIM2_PWMO_Send(54, 68, 0, true);
+
+        //A4988_RunStep(A4988_DIR_FRONT, 1); delay_ms(100);
+        
+        //LCD_MainAnimateIcons();
+        LCD_MainMotorMonitor();
+        
+        //LED_CloseAll(true);
+        //LED_MainHorseLamp(200);
+
+        //A4988_MainKeyControlMotor();
+        
+        //CONNECT_MainConnectMapLed();
+        //CONNECT_MainConnectAnyMapLedOne();
+        //CONNECT_MainConnectMapLedFilterShort();
+        
+        //ADC2_MainVoltMapLed();
+        //ADC2_MainShowAllAdcValue();
+        
+        //UART1_SendByte(0x0F);
+        //UART1_MainReceiveSendToLin();
+        
+        //LIN_MASTER_MainFindASlaveId(false);
+        //LIN_MASTER_MainMainAReceiveSlaveToUsb();
+    }
+}
+
+
+/**
+ * 断言函数
+ * 在编程的过程中为程序提供参数检查
+ * STM8 固定的函数，最好提供，否则编译可能出错；具体参考 stm8s_conf.h
+ */
+#ifdef USE_FULL_ASSERT
+    void assert_failed(u8* file, u32 line)
+    {
+        while(1){
+            // TODO
+            // 当程序 跑偏、死循环 时可以在此处打印出来用于查阅
+        }
+    }
+#endif
